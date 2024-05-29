@@ -69,7 +69,7 @@ This register contains status information for the DMA.
 ### Fields 
 
 | Bits | Type | Reset | Name      | Description | 
-|----|----|-----|----------------------------------------------------------------------------------------------------------------------------------------------------------------------| 
+|----|----|-----|----------------|------------------------------------------------------------------------------------------------------------------------------------------------------| 
 | 63:2 |      |       |           | Reserved | 
 | 1    | ro   | 0x0   | fifo_full | If this bit is set, the buffers of the DMA are full. Any further submissions via the desc_addr register may overwrite previously submitted jobs or get lost. | 
 | 0    | ro   | 0x0   | busy      | The DMA is busy | 
