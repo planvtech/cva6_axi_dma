@@ -82,9 +82,10 @@ This register contains status information for the DMA.
  The format of descriptors when using a 64 AXI bus is as follows:
 
 | Destination Address (63:0)|
+|------|
 | Source Address      (63:0)|
 | Next Descriptor     (63:0)|
-| Length (31:0) and Flags (31:0)|
+| Length (31:0) & Flags (31:0)|
 
 A value of 0xFFFF_FFFF_FFFF_FFFF in the Next Descriptor indicates it is the last descriptor in chain
 
