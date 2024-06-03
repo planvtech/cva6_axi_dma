@@ -75,13 +75,29 @@ This register contains status information for the DMA.
 | 0    | ro   | 0x0   | busy      | The DMA is busy | 
 
  <a id="item-five"></a>
+
  ## Getting Started
- To initiate a transaction, first the descriptor information needs to be written in the memory. Afterwards, the DMA is started when the address of the first descriptor is written to the desc_addr register.
+ To initiate a transaction, first the descriptor information needs to be written in the memory. Afterwards, the DMA is started when the address of the first descriptor is written to the desc_addr register. 
+ 
+ The format of descriptors when using a 64 AXI bus is as follows:
+
+| Destination Address (63:0)|
+| Source Address      (63:0)|
+| Next Descriptor     (63:0)|
+| Length (31:0) and Flags (31:0)|
+
+A value of 0xFFFF_FFFF_FFFF_FFFF in the Next Descriptor indicates it is the last descriptor in chain
+
+The Length is the amount of bytes to be copied in the transaction.
+
+Description of currently defined flags is available in the idma_desc64_top.sv file.
 
  <a id="item-six"></a> 
+
 ## Contributing
 Contributions to this project are enthusiastically encouraged. If you encounter issues or have enhancements to propose, please initiate an issue or submit a pull request. Ensure compliance with the project's coding standards and guidelines.
 
 <a id="item-seven"></a> 
+
 ## License
 This project is licensed under the ---- License. You are free to use, modify, and distribute the code in accordance with the terms stipulated in the license.
