@@ -1,3 +1,10 @@
+// Copyright 2023 ETH Zurich and University of Bologna.
+// Copyright 2024 PlanV Technology
+// Solderpad Hardware License, Version 0.51, see LICENSE for details.
+// SPDX-License-Identifier: SHL-0.51
+
+// Author: Angela Gonzalez, PlanV Technology
+
 `include "../register_interface/include/register_interface/typedef.svh"
 `include "../axi/include/axi/typedef.svh"
 `include "idma/typedef.svh"
