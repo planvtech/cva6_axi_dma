@@ -5,12 +5,12 @@
 
 // Author: Angela Gonzalez, PlanV Technology
 
-`include "../register_interface/include/register_interface/typedef.svh"
-`include "../axi/include/axi/typedef.svh"
+`include "register_interface/typedef.svh"
+`include "axi/typedef.svh"
 `include "idma/typedef.svh"
 
 
-module idma #(
+module idma_top #(
     /// Width of the addresses
     parameter int unsigned AddrWidth              = 64   ,
     /// Width of a data item on the AXI bus
