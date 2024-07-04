@@ -124,7 +124,7 @@ module idma_legalizer_rw_axi #(
     //--------------------------------------
     idma_legalizer_page_splitter #(
         .OffsetWidth   ( OffsetWidth ),
-        .PageAddrWidth ( PageSize    ),
+        .PageAddrWidth ( PageAddrWidth),
         .addr_t        ( addr_t      ),
         .page_len_t    ( page_len_t  ),
         .page_addr_t   ( page_addr_t )
@@ -145,7 +145,7 @@ module idma_legalizer_rw_axi #(
     //--------------------------------------
     idma_legalizer_page_splitter #(
         .OffsetWidth   ( OffsetWidth ),
-        .PageAddrWidth ( PageSize    ),
+        .PageAddrWidth ( PageAddrWidth),
         .addr_t        ( addr_t      ),
         .page_len_t    ( page_len_t  ),
         .page_addr_t   ( page_addr_t )
